@@ -56,7 +56,7 @@ fun QuranScreen(modifier: Modifier = Modifier) {
             },
             leadingIcon = {
                 Icon(
-                    imageVector = ImageVector.vectorResource(R.drawable.quran_svgrepo_com),
+                    imageVector = ImageVector.vectorResource(R.drawable.ic_quran_logo),
                     contentDescription = null,
                     tint = primaryDark,
                     modifier = Modifier.size(28.dp),

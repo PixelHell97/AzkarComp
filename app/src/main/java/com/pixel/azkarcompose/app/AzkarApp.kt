@@ -1,12 +1,10 @@
 package com.pixel.azkarcompose.app
 
 import android.app.Application
-import com.pixel.azkarcompose.azkar.presentation.sebha.SebhaViewModel
+import com.pixel.azkarcompose.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
-import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.context.startKoin
-import org.koin.dsl.module
 
 class AzkarApp : Application() {
     override fun onCreate() {
@@ -15,10 +13,7 @@ class AzkarApp : Application() {
             androidContext(this@AzkarApp)
             androidLogger()
             modules(
-                modules =
-                    module {
-                        viewModelOf(::SebhaViewModel)
-                    },
+                modules = appModule,
             )
         }
     }

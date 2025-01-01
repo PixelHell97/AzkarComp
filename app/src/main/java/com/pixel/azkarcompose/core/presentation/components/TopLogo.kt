@@ -23,7 +23,7 @@ fun TopLogo(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center,
     ) {
         Image(
-            painter = painterResource(R.drawable.mosque_011),
+            painter = painterResource(R.drawable.bg_mosque_011),
             contentDescription = null,
         )
 

@@ -10,6 +10,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.pixel.azkarcompose.R
 
 @Composable
 fun ScreenBackground(
@@ -27,18 +29,24 @@ fun ScreenBackground(
         )
         Box(
             modifier =
-                Modifier
-                    .fillMaxSize()
-                    .background(
-                        brush =
-                            Brush.verticalGradient(
-                                colors =
-                                    listOf(
-                                        Color(0xb3202020),
-                                        Color(0xff202020),
-                                    ),
-                            ),
+            Modifier
+                .fillMaxSize()
+                .background(
+                    brush =
+                    Brush.verticalGradient(
+                        colors =
+                        listOf(
+                            Color(0xb3202020),
+                            Color(0xff202020),
+                        ),
                     ),
+                ),
         )
     }
+}
+
+@Preview
+@Composable
+private fun BackgroundPrev() {
+    ScreenBackground(backgroundResId = R.drawable.bg_silhouette_woman_reading_quran)
 }

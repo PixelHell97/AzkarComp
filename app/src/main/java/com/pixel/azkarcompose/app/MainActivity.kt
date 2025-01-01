@@ -6,8 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import com.pixel.azkarcompose.azkar.presentation.sebha.SebhaRoute
+import com.pixel.azkarcompose.azkar.presentation.radio.RadioRoute
 import com.pixel.azkarcompose.ui.theme.AzkarComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AzkarComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SebhaRoute()
+                    RadioRoute()
                 }
             }
         }

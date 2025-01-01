@@ -37,9 +37,9 @@ fun RecentSuraCard(
                 )
             }
             Image(
-                painter = painterResource(R.drawable.rectangle124),
+                painter = painterResource(R.drawable.bg_recent_read_card),
                 contentDescription = null,
-                modifier = Modifier.size(64.dp)
+                modifier = Modifier.size(64.dp),
             )
         }
     }

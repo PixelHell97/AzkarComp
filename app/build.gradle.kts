@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "RADIO_API_URL", "\"https://mp3quran.net/api/v3/radios\"")
+            buildConfigField("String", "RADIO_API_URL", "\"https://mp3quran.net/api/v3/radios?language=eng\"")
         }
         release {
             isMinifyEnabled = false
@@ -30,7 +30,7 @@ android {
                 "proguard-rules.pro",
             )
 
-            buildConfigField("String", "RADIO_API_URL", "\"https://mp3quran.net/api/v3/radios\"")
+            buildConfigField("String", "RADIO_API_URL", "\"https://mp3quran.net/api/v3/radios?language=eng\"")
         }
     }
     compileOptions {
@@ -41,6 +41,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 }
@@ -64,6 +65,9 @@ dependencies {
 
     // Ktor
     implementation(libs.bundles.ktor)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
